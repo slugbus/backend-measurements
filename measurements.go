@@ -3,6 +3,7 @@ package measusurements
 
 import (
 	"math"
+	"fmt"
 )
 
 const CenterLat = 36.99250
@@ -48,6 +49,11 @@ func getDistance(lat1, long1, lat2, long2 float64) float64 {
 	miles := kilo * 0.621371
 
 	return miles
+}
+
+func getDistanceFromStopToStop(firstStopId int, secondStopId int) float64 {
+	var OutDistances := [17]float64{0.3, 0.4, 0.4, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.5, 0.1, 0.2, 0.5, 0.4, 0.1}
+
 }
 
 func GetETA(distance float64, speed float64) float64 {
