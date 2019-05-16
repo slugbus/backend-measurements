@@ -52,9 +52,19 @@ func getDistance(lat1, long1, lat2, long2 float64) float64 {
 }
 
 func getDistanceFromStopToStop(firstStopId int, secondStopId int) float64 {
-	var OutDistances := [17]float64{0.3, 0.4, 0.4, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.5, 0.1, 0.2, 0.5, 0.4, 0.1}
-
-}
+	var outDistances :=[17] float64{0.3, 0.4, 0.4, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.5, 0.1, 0.2, 0.5, 0.4, 0.1}
+	var innerDistances :=[17] float64{0.2, 0.4, 0.7, 0.2, 0.3, 0.2, 0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4,}
+	distance := 0
+	if firstBusStop.IsInner == true{
+		distance += innerDistances[firstStopID]
+		firstStopID++
+		for firstStopID < secondStopId {
+			distance += innerDistances[firstStopID]
+			firstStopID++
+		}
+	}
+		
+	}
 
 func GetETA(distance float64, speed float64) float64 {
 	// get amount of time in hours
