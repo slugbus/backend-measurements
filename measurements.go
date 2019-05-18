@@ -3,7 +3,6 @@ package measusurements
 
 import (
 	"math"
-	"fmt"
 )
 
 const CenterLat = 36.99250
@@ -51,11 +50,12 @@ func getDistance(lat1, long1, lat2, long2 float64) float64 {
 	return miles
 }
 
-func getDistanceFromStopToStop(firstStopId int, secondStopId int) float64 {
-	var outDistances :=[17] float64{0.3, 0.4, 0.4, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.5, 0.1, 0.2, 0.5, 0.4, 0.1}
-	var innerDistances :=[17] float64{0.2, 0.4, 0.7, 0.2, 0.3, 0.2, 0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4,}
+/*
+func getDistanceFromStopToStop(firstStopID int, secondStopID int) float64 {
+	outDistances := [17]float64{0.3, 0.4, 0.4, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.5, 0.1, 0.2, 0.5, 0.4, 0.1}
+	innerDistances := [17]float64{0.2, 0.4, 0.7, 0.2, 0.3, 0.2, 0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4}
 	distance := 0
-	if firstBusStop.IsInner == true{
+	if firstBusStop.IsInner == true {
 		distance += innerDistances[firstStopID]
 		firstStopID++
 		for firstStopID < secondStopId {
@@ -63,9 +63,10 @@ func getDistanceFromStopToStop(firstStopId int, secondStopId int) float64 {
 			firstStopID++
 		}
 	}
-		
-	}
 
+} */
+
+// GetETA func
 func GetETA(distance float64, speed float64) float64 {
 	// get amount of time in hours
 	t := distance / speed
