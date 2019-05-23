@@ -17,7 +17,7 @@ func Speed(distance float64, time float64) float64 {
 }
 
 // Dir gives direction relative
-func Direction(lat1, long1, lat2, long2 float64) float64 {
+func Angle(lat1, long1, lat2, long2 float64) float64 {
 	top := math.Log(math.Tan((lat2 / 2) + (math.Pi / 4)))
 	bottom := math.Log(math.Tan((lat1 / 2) + (math.Pi / 4)))
 	dTeta := top - bottom
