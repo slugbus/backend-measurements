@@ -18,15 +18,14 @@ func Speed(distance float64, time float64) float64 {
 
 // Dir gives direction relative
 func Angle(lat1, long1, lat2, long2 float64) float64 {
-	//top := math.Log(math.Tan((lat2 / 2) + (math.Pi / 4)))
-	//bottom := math.Log(math.Tan((lat1 / 2) + (math.Pi / 4)))
-	//dTeta := top - bottom
+	top := math.Log(math.Tan((lat2 / 2) + (math.Pi / 4)))
+	bottom := math.Log(math.Tan((lat1 / 2) + (math.Pi / 4)))
+	dTeta := top - bottom
 
-	//dLong := math.Abs(long1 - long2)
-	//teta := math.Atan2(dLong, dTeta)
+	dLong := math.Abs(long1 - long2)
+	teta := math.Atan2(dLong, dTeta)
 
-	//return math.Round((180 / math.Pi) * teta)
-	return 0.0
+	return math.Round((180 / math.Pi) * teta)
 }
 
 // Dist returns distance traveled in miles
