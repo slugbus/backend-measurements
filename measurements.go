@@ -26,7 +26,7 @@ func Angle(lat1, long1, lat2, long2 float64) float64 {
 	teta := math.Atan2(dLong, dTeta)
 
 	//return math.Round((180 / math.Pi) * teta)
-	return 0
+	return 0.0
 }
 
 // Dist returns distance traveled in miles
