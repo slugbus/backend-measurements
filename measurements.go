@@ -1,5 +1,5 @@
 // Package measurements measures distances
-package measusurements
+package measurements
 
 import (
 	"math"
