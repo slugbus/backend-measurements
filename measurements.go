@@ -29,7 +29,7 @@ func Angle(lat1, long1, lat2, long2 float64) float64 {
 }
 
 // Dist returns distance traveled in miles
-func getDistance(lat1, long1, lat2, long2 float64) float64 {
+func GetDistance(lat1, long1, lat2, long2 float64) float64 {
 	lat1 = lat1 * math.Pi / 180
 	long1 = long1 * math.Pi / 180
 
