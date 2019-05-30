@@ -70,8 +70,9 @@ func getDistanceFromStopToStop(firstStopID int, secondStopID int) float64 {
 }
 
 // GetETA func
-func GetETA(distance float64, speed float64) float64 {
+func GetETA(firstStopID int, secondStopID int, speed float64) float64 {
 	// get amount of time in hours
+	distance := getDistanceFromStopToStop(firstStopID, secondStopID)
 	t := distance / speed
 	// convert to seconds from hours
 	t = t * 60 * 60
